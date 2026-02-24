@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversia — Escalá tus ventas con IA</title>
+    <meta name="description"
+        content="Conseguí más clientes en 48 horas con campañas publicitarias impulsadas por Inteligencia Artificial. Sin presupuestos de multinacional. Habla con nuestro Agente IA ahora." />
+    <!-- Open Graph para campañas Meta/Google -->
+    <meta property="og:title" content="¿Tu negocio necesita más ventas? Tenemos la solución." />
+    <meta property="og:description"
+        content="Publicitá como una multinacional, pagá como una PyME. Agencia Conversia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://agenciaconversia.com/og-image.jpg" />
+    <!-- No-index para landing de campaña — no indexar en Google -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="landing.css" />
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════
+       BARRA SUPERIOR (Urgencia)
+  ══════════════════════════════════════ -->
+    <div class="top-bar" id="top-bar">
+        <span class="top-bar-dot"></span>
+        <p>🔥 Últimos <strong id="spots-count">7</strong> cupos disponibles este mes — <a href="#lead-form">Reservá el
+                tuyo ahora</a></p>
+        <button class="top-bar-close" id="top-bar-close" aria-label="Cerrar">×</button>
+    </div>
+
+    <!-- ══════════════════════════════════════
+       NAVBAR MÍNIMO
+  ══════════════════════════════════════ -->
+    <header class="lp-nav" id="lp-nav">
+        <div class="lp-nav-inner">
+            <a href="#" class="nav-logo">CONVERS<span class="logo-ia">IA</span></a>
+            <a href="#lead-form" class="btn-primary btn-sm" id="nav-whatsapp-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                </svg>
+                Hablar con el Agente IA
+            </a>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════
+       HERO — Hook de Campaña
+  ══════════════════════════════════════ -->
+    <section class="lp-hero" id="inicio">
+        <canvas id="lp-canvas"></canvas>
+        <div class="lp-hero-content container">
+            <div class="lp-hero-left">
+                <div class="hero-badge fade-in">
+                    <span class="badge-dot"></span> Powered by SaleADS.ai
+                </div>
+                <h1 class="lp-title fade-in">
+                    ¿Tu negocio necesita<br />
+                    <span class="gradient-text">más clientes</span><br />
+                    esta semana?
+                </h1>
+                <p class="lp-sub fade-in">
+                    En <strong>48 horas</strong> tenés tu primera campaña activa con Inteligencia Artificial. Sin
+                    estructura costosa. Sin contratos eternos. <strong>Solo resultados.</strong>
+                </p>
+                <div class="lp-proof fade-in">
+                    <div class="proof-item">
+                        <span class="proof-num">+300%</span>
+                        <span class="proof-label">ROAS promedio</span>
+                    </div>
+                    <div class="proof-item">
+                        <span class="proof-num">48hs</span>
+                        <span class="proof-label">Tiempo de lanzamiento</span>
+                    </div>
+                    <div class="proof-item">
+                        <span class="proof-num">10x</span>
+                        <span class="proof-label">Más barato que agencia</span>
+                    </div>
+                </div>
+                <div class="lp-ctas fade-in">
+                    <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
+                        class="btn-whatsapp btn-large" target="_blank" rel="noopener" id="hero-wa-btn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                        </svg>
+                        Hablar con el Agente IA ahora
+                    </a>
+                    <a href="#lead-form" class="btn-ghost btn-large" id="hero-form-btn">O dejá tus datos →</a>
+                </div>
+                <!-- Social proof avatars -->
+                <div class="social-proof fade-in">
+                    <div class="avatars">
+                        <div class="avatar" style="background:#7000FF">M</div>
+                        <div class="avatar" style="background:#00a884">L</div>
+                        <div class="avatar" style="background:#e11d48">A</div>
+                        <div class="avatar" style="background:#f59e0b">R</div>
+                        <div class="avatar" style="background:#0ea5e9">C</div>
+                    </div>
+                    <p><strong>+120 negocios</strong> ya escalan con Conversia este año</p>
+                </div>
+            </div>
+
+            <!-- Lead form en hero (acorta el funnel) -->
+            <div class="lp-hero-right fade-in">
+                <div class="hero-form-card" id="lead-form">
+                    <div class="hfc-header">
+                        <div class="hfc-badge">Cupos limitados este mes</div>
+                        <h2>Quiero escalar mis ventas</h2>
+                        <p>Completá el formulario y nuestro Agente IA te responde en minutos</p>
+                    </div>
+                    <form id="lp-form" novalidate>
+                        <div class="lp-form-group">
+                            <label for="lp-nombre">Tu nombre</label>
+                            <input type="text" id="lp-nombre" placeholder="Nombre completo" required />
+                        </div>
+                        <div class="lp-form-group">
+                            <label for="lp-whatsapp">WhatsApp *</label>
+                            <input type="tel" id="lp-whatsapp" placeholder="+54 9 11 XXXX XXXX" required />
+                        </div>
+                        <div class="lp-form-group">
+                            <label for="lp-rubro">Rubro de tu negocio</label>
+                            <select id="lp-rubro">
+                                <option value="" disabled selected>Seleccioná tu rubro</option>
+                                <option value="local">Negocio Local</option>
+                                <option value="profesional">Profesional Independiente</option>
+                                <option value="ecommerce">Ecommerce</option>
+                                <option value="clinica">Clínica / Salud</option>
+                                <option value="gastronomia">Gastronomía</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full" id="lp-submit-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                            </svg>
+                            <span>Quiero ser contactado por WhatsApp</span>
+                        </button>
+                        <p class="lp-form-notice">Sin spam. Te responde nuestro Agente IA al instante.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       LOGOS / PLATAFORMAS
+  ══════════════════════════════════════ -->
+    <section class="lp-logos">
+        <div class="container">
+            <p class="logos-label">Campañas en todas las plataformas</p>
+            <div class="logos-row">
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z" fill="#1877F2" />
+                        <path
+                            d="M28.45 25.5H25V37h-5V25.5h-2.5V21H20v-2.5C20 15.9 21.4 14 25 14h3.5v4.5H27c-1.1 0-2 .45-2 1.5V21h3.5l-.05 4.5z"
+                            fill="#fff" />
+                    </svg>
+                    Meta Ads
+                </div>
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z" fill="#E1306C" />
+                        <circle cx="24" cy="24" r="7" stroke="#fff" stroke-width="3" />
+                        <circle cx="32" cy="16" r="2" fill="#fff" />
+                    </svg>
+                    Instagram Ads
+                </div>
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <path d="M6 12l18 12L42 12" stroke="#4285F4" stroke-width="3" />
+                        <rect x="6" y="10" width="36" height="28" rx="3" stroke="#4285F4" stroke-width="3" />
+                    </svg>
+                    Google Ads
+                </div>
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <rect x="4" y="4" width="40" height="40" rx="8" fill="#0A66C2" />
+                        <path d="M16 20v14M16 14v2M24 20v14M24 26c0-3.31 2.69-6 6-6s6 2.69 6 6v8" stroke="#fff"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    LinkedIn Ads
+                </div>
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <rect x="4" y="4" width="40" height="40" rx="4" fill="#000" />
+                        <path d="M26 8l-12 32h5l3-8h10l3 8h5L26 8zm-2 18 4-10 4 10h-8z" fill="#fff" />
+                    </svg>
+                    TikTok Ads
+                </div>
+                <div class="logo-chip">
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#25D366" />
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059C10.8 11.032 10.955 10.872 11.103 10.724c.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                            fill="#fff" />
+                    </svg>
+                    WhatsApp Ads
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       SECTION: Por qué Conversia
+  ══════════════════════════════════════ -->
+    <section class="lp-section lp-why">
+        <div class="container">
+            <div class="lp-why-inner">
+                <div class="lp-why-text">
+                    <div class="section-label">El problema</div>
+                    <h2>Las agencias tradicionales <span class="gradient-text">te cobran demasiado</span> y tardan
+                        demasiado</h2>
+                    <p>Un equipo de publicidad in-house puede costarte más de $3.000 USD al mes. Las grandes agencias te
+                        piden contratos largos y resultados que tardan. <strong>Nosotros llegamos en 48 horas y cobramos
+                            solo cuando crecés.</strong></p>
+                    <ul class="why-list">
+                        <li>
+                            <div class="why-icon yes">✓</div>
+                            <span><strong>Conversia:</strong> Setup en 48hs · Fee simbólico · Success Fee con ROAS
+                                positivo</span>
+                        </li>
+                        <li>
+                            <div class="why-icon no">✗</div>
+                            <span><strong>Agencia tradicional:</strong> 2-4 semanas · Fee fijo alto · Contratos
+                                anuales</span>
+                        </li>
+                        <li>
+                            <div class="why-icon no">✗</div>
+                            <span><strong>Hacerlo solo:</strong> Curva de aprendizaje larga · Dinero quemado en prueba y
+                                error</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lp-why-card">
+                    <div class="why-card-inner">
+                        <div class="wci-label">Ahorro estimado vs. agencia tradicional</div>
+                        <div class="wci-number gradient-text">$2.500<span>USD/mes</span></div>
+                        <div class="wci-desc">Mismo resultado. Sin el costo inflado de la estructura humana.</div>
+                        <div class="wci-divider"></div>
+                        <div class="wci-features">
+                            <div class="wci-feature">
+                                <span class="wci-dot"></span> Segmentación IA hiperprecisa
+                            </div>
+                            <div class="wci-feature">
+                                <span class="wci-dot"></span> Creatividades generadas con IA
+                            </div>
+                            <div class="wci-feature">
+                                <span class="wci-dot"></span> Optimización 24/7 automática
+                            </div>
+                            <div class="wci-feature">
+                                <span class="wci-dot"></span> Reportes en tiempo real
+                            </div>
+                            <div class="wci-feature">
+                                <span class="wci-dot"></span> Agente IA disponible siempre
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
+                            class="btn-whatsapp" target="_blank" rel="noopener" id="why-wa-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                            </svg>
+                            Consultar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       SECTION: Proceso / Pasos
+  ══════════════════════════════════════ -->
+    <section class="lp-section lp-steps">
+        <div class="container">
+            <div class="section-label" style="text-align:center;">Así funciona</div>
+            <h2 class="lp-section-title" style="text-align:center;">De cero a ventas en <span class="gradient-text">48
+                    horas</span></h2>
+            <div class="steps-grid">
+                <div class="step-card lp-fade">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">💬</div>
+                    <h3>Hablás con nuestro Agente IA</h3>
+                    <p>Por WhatsApp, en minutos. Sin llamadas. Sin formularios largos. El agente analiza tu negocio y te
+                        propone la estrategia.</p>
+                    <div class="step-time">⏱ 15 minutos</div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arr)" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="arr" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7000FF" />
+                                <stop offset="1" stop-color="#00D1FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="step-card lp-fade">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🛠️</div>
+                    <h3>Configuramos tu ecosistema</h3>
+                    <p>Píxeles, audiencias, creatividades y estructura de campaña generadas con IA. Todo listo sin que
+                        tengas que mover un dedo.</p>
+                    <div class="step-time">⏱ 24 horas</div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arr2)" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="arr2" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7000FF" />
+                                <stop offset="1" stop-color="#00D1FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="step-card lp-fade">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">🚀</div>
+                    <h3>Lanzamos y optimizamos</h3>
+                    <p>Tus campañas salen al aire. La IA optimiza en tiempo real cada peso invertido para maximizar tu
+                        ROAS continuamente.</p>
+                    <div class="step-time">⏱ 48 horas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       SECTION: Testimonios / Social Proof
+  ══════════════════════════════════════ -->
+    <section class="lp-section lp-testimonios">
+        <div class="container">
+            <div class="section-label" style="text-align:center;">Resultados reales</div>
+            <h2 class="lp-section-title" style="text-align:center;">Lo que dicen nuestros <span
+                    class="gradient-text">socios</span></h2>
+            <div class="testimonio-grid">
+                <div class="testimonio-card lp-fade">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"En el primer mes recuperamos 5 veces lo invertido. Nunca había logrado ese ROAS
+                        con ninguna otra agencia."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:#7000FF">M</div>
+                        <div>
+                            <div class="t-name">Martín G.</div>
+                            <div class="t-role">Centro de Estética · Buenos Aires</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card lp-fade">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"El agente de IA por WhatsApp es increíble. A las 2 de la mañana me respondió la
+                        consulta que tenía sobre mi campaña."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:#00a884">L</div>
+                        <div>
+                            <div class="t-name">Laura M.</div>
+                            <div class="t-role">Psicóloga · Córdoba</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card lp-fade">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Triplicamos nuestras ventas online en 60 días. Lo que más valoro es la
+                        transparencia — siempre sé exactamente cuánto ganamos."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:#e11d48">A</div>
+                        <div>
+                            <div class="t-name">Alejandro R.</div>
+                            <div class="t-role">Ecommerce de Indumentaria · Rosario</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       SECTION: FAQ
+  ══════════════════════════════════════ -->
+    <section class="lp-section lp-faq">
+        <div class="container lp-faq-inner">
+            <div>
+                <div class="section-label">Preguntas frecuentes</div>
+                <h2 class="lp-section-title">Respondemos tus <span class="gradient-text">dudas</span></h2>
+                <p class="lp-faq-sub">¿Preferís preguntar directamente? Nuestro Agente IA está disponible 24/7.</p>
+                <a href="https://wa.me/5491100000000?text=Hola%21+Tengo+una+consulta+sobre+Conversia"
+                    class="btn-whatsapp" target="_blank" rel="noopener" id="faq-wa-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                    </svg>
+                    Preguntar al Agente IA
+                </a>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" id="faq1-btn">¿Cuánto presupuesto de publicidad necesito tener? <span
+                            class="faq-arrow">↓</span></button>
+                    <div class="faq-a" id="faq1-ans">Trabajamos con negocios desde $200 USD de inversión publicitaria
+                        mensual. Nuestro sistema de IA optimiza cada centavo para maximizar el retorno sin importar el
+                        tamaño del presupuesto.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="faq2-btn">¿Necesito tener experiencia en publicidad digital? <span
+                            class="faq-arrow">↓</span></button>
+                    <div class="faq-a" id="faq2-ans">Para nada. Nos encargamos de todo: configuración de cuentas,
+                        píxeles, audiencias, creatividades y optimización continua. Vos solo atendés los nuevos clientes
+                        que te llegan.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="faq3-btn">¿Cómo funciona el Success Fee? <span
+                            class="faq-arrow">↓</span></button>
+                    <div class="faq-a" id="faq3-ans">El Success Fee es una comisión pequeña que se aplica solo cuando tu
+                        campaña alcanza un ROAS positivo acordado. Si tu inversión no te genera más ventas de las que
+                        costó, no te cobramos la comisión. Nuestros incentivos están 100% alineados con tu crecimiento.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="faq4-btn">¿Qué es el Agente IA de WhatsApp? <span
+                            class="faq-arrow">↓</span></button>
+                    <div class="faq-a" id="faq4-ans">Es un asistente de inteligencia artificial disponible 24/7 que
+                        puede responder consultas sobre tu cuenta, enviarte reportes, alertarte ante variaciones en el
+                        rendimiento y coordinar con nuestro equipo humano para decisiones estratégicas importantes.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="faq5-btn">¿En cuánto tiempo veo resultados? <span
+                            class="faq-arrow">↓</span></button>
+                    <div class="faq-a" id="faq5-ans">Las primeras campañas salen en 48 horas. Los primeros resultados
+                        medibles (leads, ventas, visitas) se ven en la primera semana. La optimización máxima ocurre
+                        entre la semana 3 y el mes 2, cuando el algoritmo ya aprendió las mejores audiencias.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       SECTION: CTA Final
+  ══════════════════════════════════════ -->
+    <section class="lp-section lp-cta-final">
+        <div class="lp-cta-bg">
+            <canvas id="cta-canvas"></canvas>
+        </div>
+        <div class="container lp-cta-content">
+            <div class="section-label" style="text-align:center; color:#fff;">Es tu turno</div>
+            <h2>Empezá a competir<br /><span class="gradient-text">como los grandes</span></h2>
+            <p>Cupos limitados cada mes. No dejés que tu competencia tome ventaja primero.</p>
+            <div class="lp-cta-actions">
+                <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
+                    class="btn-whatsapp btn-large" target="_blank" rel="noopener" id="final-wa-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                    </svg>
+                    Hablar con el Agente IA ahora
+                </a>
+                <a href="#lead-form" class="btn-ghost btn-large">O completar el formulario →</a>
+            </div>
+            <div class="cta-guarantee">
+                🔒 Sin compromiso · Sin contratos largos · Resultados en 48hs
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       FOOTER MÍNIMO
+  ══════════════════════════════════════ -->
+    <footer class="lp-footer">
+        <div class="container lp-footer-inner">
+            <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
+            <div class="lp-footer-links">
+                <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener"
+                    id="footer-lp-ig">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61558746508457" target="_blank" rel="noopener"
+                    id="footer-lp-fb">Facebook</a>
+                <a href="https://www.linkedin.com/company/agencia-conversia/" target="_blank" rel="noopener"
+                    id="footer-lp-li">LinkedIn</a>
+                <a href="index.html" id="footer-main-site">Sitio principal</a>
+            </div>
+            <p class="lp-footer-copy">© 2025 Conversia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════
+       BOTÓN FLOTANTE WHATSAPP
+  ══════════════════════════════════════ -->
+    <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
+        class="wa-float" target="_blank" rel="noopener" id="wa-float-btn"
+        aria-label="Hablar con Agente IA por WhatsApp">
+        <div class="wa-float-pulse"></div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+        </svg>
+        <span class="wa-float-label">Agente IA</span>
+    </a>
+
+    <!-- Toast -->
+    <div class="lp-toast" id="lp-toast"></div>
+
+    <script src="landing.js"></script>
+</body>
+
+</html>
