@@ -198,7 +198,7 @@ if (lpForm) {
         const whatsapp = document.getElementById('lp-whatsapp').value.trim();
 
         if (!nombre || !whatsapp) {
-            showToast('⚠️ Por favor ingresá tu nombre y WhatsApp.');
+            showToast('⚠️ Por favor ingresa tu nombre y WhatsApp.');
             return;
         }
 

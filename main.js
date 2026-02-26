@@ -265,7 +265,7 @@ document.querySelectorAll('.q-btn').forEach(btn => {
                 q2.style.display = 'none';
                 result.style.display = 'block';
                 result.className = 'filtro-result negative';
-                result.innerHTML = '🤔 No hay problema. Cuando estés listo para crecer, Conversia va a estar acá. <br/><a href="#contacto" style="color:inherit;text-decoration:underline;margin-top:8px;display:inline-block;">Igual podés escribirnos →</a>';
+                result.innerHTML = '🤔 No hay problema. Cuando estés listo para crecer, Conversia va a estar acá. <br/><a href="#contacto" style="color:inherit;text-decoration:underline;margin-top:8px;display:inline-block;">Igual puedes escribirnos →</a>';
             }
         }
 
@@ -274,7 +274,7 @@ document.querySelectorAll('.q-btn').forEach(btn => {
             result.style.display = 'block';
             if (val === 'si') {
                 result.className = 'filtro-result positive';
-                result.innerHTML = '🚀 ¡Sos el candidato ideal para Conversia! <br/><a href="#contacto" class="btn-primary" style="margin-top:16px;display:inline-flex;">Quiero acceso al sistema →</a>';
+                result.innerHTML = '🚀 ¡Eres el candidato ideal para Conversia! <br/><a href="#contacto" class="btn-primary" style="margin-top:16px;display:inline-flex;">Quiero acceso al sistema →</a>';
             } else {
                 result.className = 'filtro-result negative';
                 result.innerHTML = '💡 Podemos ayudarte también con la parte operativa. <br/><a href="#contacto" style="color:inherit;text-decoration:underline;margin-top:8px;display:inline-block;">Hablemos igual →</a>';
@@ -301,12 +301,12 @@ contactForm.addEventListener('submit', (e) => {
     const whatsapp = document.getElementById('whatsapp').value.trim();
 
     if (!nombre || !negocio || !email || !whatsapp) {
-        showToast('⚠️ Por favor, completá los campos obligatorios.');
+        showToast('⚠️ Por favor, completa los campos obligatorios.');
         return;
     }
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRe.test(email)) {
-        showToast('⚠️ Ingresá un email válido.');
+        showToast('⚠️ Ingresa un email válido.');
         return;
     }
 
