@@ -230,7 +230,7 @@ if (lpForm) {
                 );
                 showToast('✅ ¡Listo! Te redirigimos a WhatsApp...');
                 setTimeout(() => {
-                    window.open(`https://wa.me/5491100000000?text=${msg}`, '_blank');
+                    window.open(`https://wa.me/59893731212?text=${msg}`, '_blank');
                 }, 800);
 
                 submitBtn.disabled = false;
