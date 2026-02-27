@@ -68,13 +68,13 @@ h6,
   text-wrap: balance;
 }
 
-p, 
-li, 
-blockquote, 
-.section-sub, 
-.hero-sub, 
-.bento-card p, 
-.nicho-card p, 
+p,
+li,
+blockquote,
+.section-sub,
+.hero-sub,
+.bento-card p,
+.nicho-card p,
 .modelo-card p {
   text-wrap: pretty;
 }
