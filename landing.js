@@ -242,3 +242,21 @@ document.querySelectorAll('.btn-whatsapp, .wa-float').forEach(btn => {
         // Replace with: gtag('event', 'whatsapp_click', { button_id: btn.id });
     });
 });
+
+// ── Prevent Orphan Words ──────────────────────────
+function preventOrphans() {
+    const selectors = 'p, h1, h2, h3, h4, h5, h6, .lp-title, .lp-section-title, .lp-sub';
+    document.querySelectorAll(selectors).forEach(el => {
+        if (el.children.length > 0) return;
+        let text = el.innerText.trim();
+        if (text.includes(' ')) {
+            const words = text.split(' ');
+            if (words.length > 3) {
+                const lastWord = words.pop();
+                const secondLastWord = words.pop();
+                el.innerHTML = words.join(' ') + ' ' + secondLastWord + '&nbsp;' + lastWord;
+            }
+        }
+    });
+}
+window.addEventListener('DOMContentLoaded', preventOrphans);

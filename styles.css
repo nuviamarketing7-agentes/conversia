@@ -61,8 +61,22 @@ h5,
 h6,
 .section-title,
 .hero-title,
-.filtro-text h2 {
+.filtro-text h2,
+.bento-card h3,
+.nicho-card h4,
+.modelo-card h3 {
   text-wrap: balance;
+}
+
+p, 
+li, 
+blockquote, 
+.section-sub, 
+.hero-sub, 
+.bento-card p, 
+.nicho-card p, 
+.modelo-card p {
+  text-wrap: pretty;
 }
 
 img {
