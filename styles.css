@@ -1565,28 +1565,7 @@ textarea {
   }
 }
 
-.wa-float-label {
-  position: absolute;
-  bottom: 68px;
-  right: 0;
-  background: var(--bg-card);
-  border: 1px solid var(--border-glow);
-  border-radius: var(--radius-md);
-  padding: 6px 12px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: all 0.25s;
-  pointer-events: none;
-}
 
-.wa-float:hover .wa-float-label {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 @media (max-width: 768px) {
   .wa-float {

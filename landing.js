@@ -206,20 +206,37 @@ if (lpForm) {
         submitBtn.disabled = true;
         submitBtn.querySelector('span').textContent = 'Enviando...';
 
-        // Generate WhatsApp pre-filled message and redirect
-        setTimeout(() => {
-            const rubro = document.getElementById('lp-rubro').value || 'mi negocio';
-            const msg = encodeURIComponent(
-                `Hola! Soy ${nombre} y tengo un negocio de tipo "${rubro}". Quiero información sobre cómo escalar mis ventas con Conversia.`
-            );
-            showToast('✅ ¡Listo! Te redirigimos a WhatsApp...');
-            setTimeout(() => {
-                window.open(`https://wa.me/5491100000000?text=${msg}`, '_blank');
-            }, 800);
-            submitBtn.disabled = false;
-            submitBtn.querySelector('span').textContent = 'Quiero ser contactado por WhatsApp';
-            lpForm.reset();
-        }, 1000);
+        const rubro = document.getElementById('lp-rubro').value || 'mi negocio';
+
+        // Enviar silenciosamente el lead por correo electrónico primero
+        fetch("https://formsubmit.co/ajax/contacto@agenciaconversia.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: "Nuevo Lead - Landing Conversia",
+                Origen: "Landing Page - Botón WhatsApp",
+                Nombre: nombre,
+                WhatsApp: whatsapp,
+                Rubro: rubro
+            })
+        })
+            .finally(() => {
+                // Generate WhatsApp pre-filled message and redirect
+                const msg = encodeURIComponent(
+                    `Hola! Soy ${nombre} y tengo un negocio de tipo "${rubro}". Quiero información sobre cómo escalar mis ventas con Conversia.`
+                );
+                showToast('✅ ¡Listo! Te redirigimos a WhatsApp...');
+                setTimeout(() => {
+                    window.open(`https://wa.me/5491100000000?text=${msg}`, '_blank');
+                }, 800);
+
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = 'Quiero ser contactado por WhatsApp';
+                lpForm.reset();
+            });
     });
 }
 
