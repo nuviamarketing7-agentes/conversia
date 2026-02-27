@@ -223,17 +223,10 @@ if (lpForm) {
     });
 }
 
-// ── WhatsApp float btn: show after 3s ────────
+// ── WhatsApp float btn ───────────────────────
 const waFloat = document.getElementById('wa-float-btn');
-if (waFloat) {
-    waFloat.style.opacity = '0';
-    waFloat.style.transform = 'scale(0.7)';
-    waFloat.style.transition = 'all 0.4s cubic-bezier(0.34,1.56,0.64,1)';
-    setTimeout(() => {
-        waFloat.style.opacity = '1';
-        waFloat.style.transform = 'scale(1)';
-    }, 3000);
-}
+// The button is now fixed immediately via CSS, no delay logic required.
+
 
 // ── Track WA button clicks (console log placeholder) ─
 document.querySelectorAll('.btn-whatsapp, .wa-float').forEach(btn => {
