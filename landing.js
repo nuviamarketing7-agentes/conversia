@@ -16,10 +16,29 @@ if (topBarClose) {
 }
 
 // ── Sticky nav scroll effect ─────────────────
-const navbar = document.getElementById('navbar');
+const navEl = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 20);
+    if (navEl) navEl.classList.toggle('scrolled', window.scrollY > 20);
 });
+
+// ── Burger menu logic ─────────────────────────
+const burgerBtn = document.getElementById('burger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-cta');
+
+if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        });
+    });
+}
 
 // ── Reveal on scroll (.reveal elements) ──────
 const revealObserver = new IntersectionObserver((entries) => {

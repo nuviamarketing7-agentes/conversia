@@ -470,7 +470,8 @@ select {
 }
 
 .lp-title {
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
+    /* Slightly smaller base for very small screens */
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -629,6 +630,8 @@ select {
 
 .lp-form-group input,
 .lp-form-group select {
+    width: 100%;
+    max-width: 100%;
     padding: 13px 14px;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -1267,10 +1270,12 @@ select {
     }
 
     .lp-hero-right {
-        order: -1;
+        order: 1;
+        /* Changed from -1 to 1 so title appears first */
     }
 
     .hero-form-card {
+        width: 100%;
         max-width: 500px;
         margin: 0 auto;
     }
@@ -1291,6 +1296,12 @@ select {
     .lp-faq-inner {
         grid-template-columns: 1fr;
         gap: 36px;
+    }
+
+    /* Shrink the nav CTA on medium tablets to avoid crowding */
+    /* Hide the nav CTA earlier to avoid overlapping the logo */
+    .nav-cta {
+        display: none !important;
     }
 }
 
@@ -1321,10 +1332,25 @@ select {
         gap: 16px;
     }
 
+    /* Hide the long nav CTA on small tablets/mobile to avoid overlapping logo */
+    .nav-cta {
+        display: none !important;
+    }
+
+    .burger {
+        display: flex !important;
+    }
+
+    .lp-hero-left {
+        align-items: center;
+        text-align: center;
+    }
+
     .lp-ctas {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
+
 
     .hero-form-card {
         padding: 24px 20px;
@@ -1343,6 +1369,12 @@ select {
         right: 20px;
         width: 54px;
         height: 54px;
+    }
+
+    /* Industry grid fix for mobile */
+    .nicho-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
     }
 }
 
