@@ -49,22 +49,15 @@ function animateCounter(el, target, duration = 1800) {
     requestAnimationFrame(update);
 }
 
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.stat-num').forEach(el => {
-                const targetVal = el.getAttribute('data-target');
-                if (targetVal) {
-                    animateCounter(el, parseInt(targetVal));
-                }
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsEl = document.getElementById('lp-stats');
-if (statsEl) statsObserver.observe(statsEl);
+// Fire after the hero fade-in CSS animation finishes (~900ms)
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        document.querySelectorAll('#lp-stats .stat-num').forEach(el => {
+            const targetVal = parseInt(el.getAttribute('data-target'));
+            if (!isNaN(targetVal)) animateCounter(el, targetVal);
+        });
+    }, 900);
+});
 
 // ── Hero Canvas (particles) ───────────────────
 (function initLpCanvas() {
