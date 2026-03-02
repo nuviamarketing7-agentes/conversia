@@ -28,15 +28,20 @@
   <!-- ══════════════════════════════════════
        NAVIGATION
   ══════════════════════════════════════ -->
-  <header class="nav-wrapper" id="navbar">
-    <nav class="nav-inner">
-      <a href="#inicio" class="nav-logo" id="nav-logo-link">
-        <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
-      </a>
-      <div class="nav-actions">
-        <a href="#lead-form" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
-      </div>
-    </nav>
+  <header id="header">
+    <div class="nav-wrapper" id="navbar">
+      <nav class="nav-inner">
+        <a href="#inicio" class="nav-logo" id="nav-logo-link">
+          <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
+        </a>
+        <div class="nav-actions">
+          <a href="#lead-form" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
+          <button class="burger" id="burger-btn" aria-label="Abrir menú" style="display: none;">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!-- ══════════════════════════════════════
@@ -58,17 +63,20 @@
           En <strong>48 horas</strong> tienes tu primera campaña activa con Inteligencia Artificial. Sin
           estructura costosa. Sin contratos eternos. <strong>Solo resultados.</strong>
         </p>
-        <div class="lp-proof fade-in" id="lp-stats">
-          <div class="proof-item">
-            <span class="proof-num">+<span class="stat-num" data-target="300">0</span>%</span>
+        <div class="lp-proof fade-in hero-stats" id="lp-stats">
+          <div class="proof-item stat">
+            <span class="proof-num">+<span class="stat-num" data-target="300">0</span><span
+                class="stat-unit">%</span></span>
             <span class="proof-label">ROAS promedio</span>
           </div>
-          <div class="proof-item">
-            <span class="proof-num"><span class="stat-num" data-target="48">0</span>hs</span>
+          <div class="proof-item stat">
+            <span class="proof-num"><span class="stat-num" data-target="48">0</span><span
+                class="stat-unit">hs</span></span>
             <span class="proof-label">Tiempo de lanzamiento</span>
           </div>
-          <div class="proof-item">
-            <span class="proof-num"><span class="stat-num" data-target="10">0</span>x</span>
+          <div class="proof-item stat">
+            <span class="proof-num"><span class="stat-num" data-target="10">0</span><span
+                class="stat-unit">x</span></span>
             <span class="proof-label">Más barato que agencia</span>
           </div>
         </div>
