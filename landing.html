@@ -2,529 +2,576 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversia — Escala tus ventas con IA</title>
-    <meta name="description"
-        content="Consigue más clientes en 48 horas con campañas publicitarias impulsadas por Inteligencia Artificial. Sin presupuestos de multinacional. Habla con nuestro Agente IA ahora." />
-    <!-- Open Graph para campañas Meta/Google -->
-    <meta property="og:title" content="¿Tu negocio necesita más ventas? Tenemos la solución." />
-    <meta property="og:description"
-        content="Publicita como una multinacional, paga como una PyME. Agencia Conversia." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://agenciaconversia.com/og-image.jpg" />
-    <!-- No-index para landing de campaña — no indexar en Google -->
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="landing.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Conversia — Escala tus Ventas con IA</title>
+  <meta name="description"
+    content="Conversia democratiza el acceso a la tecnología publicitaria de élite. Anuncios de inteligencia artificial para negocios locales, profesionales y ecommerce a un costo simbólico." />
+  <meta property="og:title" content="Conversia — La tecnología que dominaba el mercado, ahora es tuya" />
+  <meta property="og:description"
+    content="Democratizamos el acceso a la IA publicitaria para que tu negocio escale sus ventas en tiempo récord." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="imagenes-web/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes-web/favicon-32x32.png">
 </head>
 
 <body>
 
-    <!-- ══════════════════════════════════════
-       BARRA SUPERIOR (Urgencia)
+  <!-- ══════════════════════════════════════
+       NAVIGATION
   ══════════════════════════════════════ -->
-    <div class="top-bar" id="top-bar">
-        <span class="top-bar-dot"></span>
-        <p>🔥 Últimos <strong id="spots-count">7</strong> cupos disponibles este mes — <a href="#lead-form">Reserva el
-                tuyo ahora</a></p>
-        <button class="top-bar-close" id="top-bar-close" aria-label="Cerrar">×</button>
+  <header class="nav-wrapper" id="navbar">
+    <nav class="nav-inner">
+      <a href="#inicio" class="nav-logo" id="nav-logo-link">
+        <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
+      </a>
+      <div class="nav-actions">
+        <a href="#contacto" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-canvas" id="hero-canvas-wrapper">
+      <canvas id="pulse-canvas"></canvas>
     </div>
+    <div class="hero-content container">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span> Powered by Conversia
+      </div>
+      <h1 class="hero-title reveal">
+        La tecnología publicitaria<br />
+        que dominaba el mercado,<br />
+        <span class="gradient-text">ahora es tuya.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Ya no necesitas presupuestos de multinacionales para tener anuncios de&nbsp;élite.<br class="hide-mobile" />
+        Democratizamos el acceso a la <strong>Inteligencia Artificial</strong> para que tu negocio<br
+          class="hide-mobile" />
+        —sea local, profesional o digital— <strong>escale sus ventas en tiempo récord.</strong>
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#contacto" class="btn-primary btn-large" id="hero-cta-btn">
+          <span>Quiero acceso al sistema</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#propuesta" class="btn-ghost btn-large">Ver cómo funciona</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Descubre más</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
-       NAVBAR MÍNIMO
+  <!-- ══════════════════════════════════════
+       SECTION: Compete against Giants
   ══════════════════════════════════════ -->
-    <header class="lp-nav" id="lp-nav">
-        <div class="lp-nav-inner">
-            <a href="#" class="nav-logo">CONVERS<span class="logo-ia">IA</span></a>
-            <a href="#lead-form" class="btn-primary btn-sm" id="nav-whatsapp-btn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                    <path
-                        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+  <section class="section-giants" id="propuesta">
+    <div class="container">
+      <div class="section-label reveal">El Gran Ecualizador</div>
+      <h2 class="section-title reveal">
+        Compite contra los <span class="gradient-text">Gigantes</span>
+      </h2>
+      <p class="section-sub reveal">
+        Las grandes empresas ganan porque tienen infraestructura. Equipos de publicistas, diseñadores, estrategas y
+        datos masivos. Conversia <strong>reemplaza esa infraestructura costosa con IA</strong>, dándole a tu negocio la
+        misma calidad de segmentación, diseño y optimización a una fracción del precio.
+      </p>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-large reveal">
+          <div class="bento-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <h3>Despliegue en tiempo récord</h3>
+          <p>Desde que confirmas tu ingreso hasta tener tu primera campaña activa, pasan menos de 48 horas. No semanas,
+            no meses.</p>
+          <div class="bento-badge">48hs</div>
+        </div>
+        <div class="bento-card reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3>Segmentación IA</h3>
+          <p>Algoritmos que identifican tu cliente ideal con precisión quirúrgica, sin gastar en prueba y error.</p>
+        </div>
+        <div class="bento-card reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3>Diseño de élite</h3>
+          <p>Creatividades publicitarias generadas con IA, al nivel de grandes agencias creativas internacionales.</p>
+        </div>
+        <div class="bento-card reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <h3>Costo simbólico</h3>
+          <p>Eliminamos la estructura costosa de las agencias tradicionales. Más resultado por cada peso invertido.</p>
+        </div>
+        <div class="bento-card bento-wide reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3>Tu negocio, nuestro motor</h3>
+          <p>No importa si eres un psicólogo independiente, una barbería o un ecommerce: tienes acceso a la misma
+            tecnología que usan las multinacionales. <span class="inline-badge">Powered by Conversia</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION: El Pulso de Ventas
+  ══════════════════════════════════════ -->
+  <section class="section-pulso" id="pulso">
+    <div class="container">
+      <div class="section-label reveal">Propuesta de Valor</div>
+      <h2 class="section-title reveal">
+        El <span class="gradient-text">Pulso</span> de tu Negocio
+      </h2>
+      <p class="section-sub reveal">
+        El pulso de tu negocio son las ventas. No importa el rubro; si el pulso se detiene, el negocio muere. Conversia
+        mantiene ese pulso <strong>activo y creciente</strong> mediante campañas publicitarias de despliegue inmediato.
+      </p>
+      <div class="pulse-visual reveal">
+        <canvas id="pulse-line-canvas" width="900" height="160"></canvas>
+        <div class="pulse-icons">
+          <div class="pulse-icon-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+            <span>Negocio Local</span>
+          </div>
+          <div class="pulse-icon-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" />
+            </svg>
+            <span>Profesional Independiente</span>
+          </div>
+          <div class="pulse-icon-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span>Ecommerce</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION: Nichos
+  ══════════════════════════════════════ -->
+  <section class="section-nichos" id="nichos">
+    <div class="container">
+      <div class="section-label reveal">Para quién es Conversia</div>
+      <h2 class="section-title reveal">
+        Tu rubro. Nuestro <span class="gradient-text">sistema.</span>
+      </h2>
+      <div class="nichos-tabs reveal">
+        <button class="nicho-tab active" data-tab="locales" id="tab-locales">Negocios Locales</button>
+        <button class="nicho-tab" data-tab="profesionales" id="tab-prof">Profesionales Independientes</button>
+        <button class="nicho-tab" data-tab="ecommerce" id="tab-ecom">Ecommerce</button>
+      </div>
+      <div class="nichos-content">
+        <!-- Locales -->
+        <div class="nicho-panel active" id="panel-locales">
+          <div class="nicho-grid">
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">💈</div>
+              <h4>Barberías</h4>
+              <p>Llena tu agenda con clientes de alto valor cada semana.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">💆</div>
+              <h4>Centros de Estética</h4>
+              <p>Campañas de captación hipersegmentadas por zona y perfil.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🏋️</div>
+              <h4>Gimnasios</h4>
+              <p>Aumenta socios y reduce la tasa de abandono con retargeting inteligente.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🏥</div>
+              <h4>Clínicas</h4>
+              <p>Posiciona tus servicios de salud con campañas de muy alta confianza.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🍽️</div>
+              <h4>Gastronomía</h4>
+              <p>Genera visitas y pedidos con creatividades irresistibles hechas con IA.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🔧</div>
+              <h4>Servicios del Hogar</h4>
+              <p>De albañiles a plomeros: domina tu zona con publicidad local de élite.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Profesionales -->
+        <div class="nicho-panel" id="panel-profesionales">
+          <div class="nicho-grid">
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🧠</div>
+              <h4>Psicólogos</h4>
+              <p>Capta pacientes de forma ética y constante con campañas de alta conversión.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🦴</div>
+              <h4>Kinesiólogos</h4>
+              <p>Muestra tus especialidades al público que realmente las necesita.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">⚖️</div>
+              <h4>Abogados</h4>
+              <p>Genera leads calificados en tu área de especialidad jurídica.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">📊</div>
+              <h4>Consultores</h4>
+              <p>Posiciona tu expertise y convierte visibilidad en contratos.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🦷</div>
+              <h4>Odontólogos</h4>
+              <p>Campañas de captación y fidelización para tu consultorio.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🏗️</div>
+              <h4>Arquitectos</h4>
+              <p>Muestra tu portfolio y genera proyectos con publicidad visual premium.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ecommerce -->
+        <div class="nicho-panel" id="panel-ecommerce">
+          <div class="nicho-grid">
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">👗</div>
+              <h4>Moda & Indumentaria</h4>
+              <p>Creatividades de alto impacto que generan ventas directas.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">💄</div>
+              <h4>Belleza & Cosmética</h4>
+              <p>Capitaliza tendencias virales con campañas de IA ultrarrápidas.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🏠</div>
+              <h4>Hogar & Deco</h4>
+              <p>Anuncios con segmentación de intención de compra de alta precisión.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🍃</div>
+              <h4>Salud & Bienestar</h4>
+              <p>Escala tu tienda online con estrategias de remarketing inteligente.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">⚡</div>
+              <h4>Tecnología</h4>
+              <p>Anuncios dinámicos y personalizados para catálogos grandes.</p>
+            </div>
+            <div class="nicho-card reveal">
+              <div class="nicho-emoji">🎲</div>
+              <h4>Juguetes & Entretenimiento</h4>
+              <p>Campañas de temporada y siempre-on que sostienen las ventas todo el año.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION: Modelo Comercial
+  ══════════════════════════════════════ -->
+  <section class="section-modelo" id="modelo">
+    <div class="container">
+      <div class="section-label reveal">Transparencia total</div>
+      <h2 class="section-title reveal">
+        Nuestro Modelo <span class="gradient-text">Comercial</span>
+      </h2>
+      <p class="section-sub reveal">Sin letras chicas. Sin sorpresas. Tu inversión está alineada con tu crecimiento.</p>
+      <div class="modelo-cards">
+        <div class="modelo-card reveal">
+          <div class="modelo-step">01</div>
+          <div class="modelo-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3>Setup Inicial</h3>
+          <p>Puesta a punto completa de tu ecosistema digital: configuración de píxeles, audiencias, cuentas
+            publicitarias y estructura de campañas. Una sola vez.</p>
+          <div class="modelo-tag">Inversión única</div>
+        </div>
+        <div class="modelo-card reveal">
+          <div class="modelo-step">02</div>
+          <div class="modelo-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </div>
+          <h3>Gestión Mensual</h3>
+          <p>Un fee fijo y simbólico por el mantenimiento del motor de ventas. Estrategia continua, optimización diaria
+            y reportes de performance.</p>
+          <div class="modelo-tag">Fee mensual fijo</div>
+        </div>
+        <div class="modelo-card modelo-star reveal">
+          <div class="modelo-step">03</div>
+          <div class="modelo-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <h3>Success Fee</h3>
+          <p>Comisión por resultados, sujeta a un <strong>ROAS positivo</strong>. Si tu negocio no crece, no hay
+            comisión. Nuestros incentivos están alineados con los tuyos.</p>
+          <div class="modelo-tag success-tag">Solo si creces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION: Filtro / Formulario
+  ══════════════════════════════════════ -->
+  <section class="section-filtro" id="filtro">
+    <div class="container">
+      <div class="filtro-wrapper reveal">
+        <div class="filtro-text">
+          <div class="section-label">Antes de empezar</div>
+          <h2>¿Eres el candidato ideal para Conversia?</h2>
+          <p>Trabajamos con negocios que están listos para crecer. Responde estas dos preguntas y lo descubrimos juntos.
+          </p>
+        </div>
+        <div class="filtro-form">
+          <div class="filtro-question" id="q1-block">
+            <p class="q-label">¿Quieres escalar tus ventas actuales?</p>
+            <div class="q-options">
+              <button class="q-btn" data-q="1" data-val="si" id="q1-si">Sí, es mi prioridad</button>
+              <button class="q-btn" data-q="1" data-val="no" id="q1-no">Todavía no lo necesito</button>
+            </div>
+          </div>
+          <div class="filtro-question" id="q2-block" style="display:none;">
+            <p class="q-label">¿Estás listo para atender una demanda de alto nivel?</p>
+            <div class="q-options">
+              <button class="q-btn" data-q="2" data-val="si" id="q2-si">Sí, tengo capacidad operativa</button>
+              <button class="q-btn" data-q="2" data-val="no" id="q2-no">Necesito organizar primero</button>
+            </div>
+          </div>
+          <div class="filtro-result" id="filtro-result" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION: Formulario de Contacto
+  ══════════════════════════════════════ -->
+  <section class="section-contacto" id="contacto">
+    <div class="container">
+      <div class="section-label reveal">Comienza ahora</div>
+      <h2 class="section-title reveal">
+        Únete al sistema de <span class="gradient-text">ventas con IA</span>
+      </h2>
+      <p class="section-sub reveal">Completa el formulario y un socio de Conversia se pondrá en contacto contigo dentro
+        de las 24 horas.</p>
+      <div class="contact-wrapper">
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="negocio">Nombre del negocio *</label>
+              <input type="text" id="negocio" name="negocio" placeholder="Tu empresa o marca" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="hola@tuempresa.com" required />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+598 93 731 212" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rubro">Rubro de tu negocio</label>
+            <select id="rubro" name="rubro">
+              <option value="" disabled selected>Selecciona tu rubro</option>
+              <option value="negocio-local">Negocio Local (barbería, estética, gimnasio...)</option>
+              <option value="profesional">Profesional independiente</option>
+              <option value="ecommerce">Ecommerce / Tienda Online</option>
+              <option value="clinica">Clínica / Salud</option>
+              <option value="gastronomia">Gastronomía</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">¿Cuál es tu principal desafío de ventas?</label>
+            <textarea id="mensaje" name="mensaje" rows="4"
+              placeholder="Cuéntanos brevemente qué quieres mejorar..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="form-submit-btn">
+            <span>Quiero acceso al sistema</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <div class="form-notice">Sin compromiso. Un socio te contacta en las próximas 24hs.</div>
+        </form>
+        <div class="contact-info reveal">
+          <h3>También puedes escribirnos directamente</h3>
+          <div class="contact-channels">
+            <a href="https://www.instagram.com/agencia.conversia/" class="channel-link" target="_blank" rel="noopener"
+              id="instagram-link">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
-                Hablar con el Agente IA
+              </div>
+              <div>
+                <span class="channel-name">Instagram</span>
+                <span class="channel-handle">@agencia.conversia</span>
+              </div>
             </a>
+            <a href="https://www.facebook.com/profile.php?id=61558746508457" class="channel-link" target="_blank"
+              rel="noopener" id="facebook-link">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </div>
+              <div>
+                <span class="channel-name">Facebook</span>
+                <span class="channel-handle">Agencia Conversia</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/agencia-conversia/" class="channel-link" target="_blank"
+              rel="noopener" id="linkedin-link">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div>
+                <span class="channel-name">LinkedIn</span>
+                <span class="channel-handle">Agencia Conversia</span>
+              </div>
+            </a>
+          </div>
+          <div class="contact-quote">
+            <blockquote>"El pulso de tu negocio son las ventas. Nosotros lo mantenemos activo."</blockquote>
+            <cite>— Equipo Conversia</cite>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
-       HERO — Hook de Campaña
+  <!-- ══════════════════════════════════════
+       FOOTER
   ══════════════════════════════════════ -->
-    <section class="lp-hero" id="inicio">
-        <canvas id="lp-canvas"></canvas>
-        <div class="lp-hero-content container">
-            <div class="lp-hero-left">
-                <div class="hero-badge fade-in">
-                    <span class="badge-dot"></span> Powered by Conversia
-                </div>
-                <h1 class="lp-title fade-in">
-                    ¿Tu negocio necesita<br />
-                    <span class="gradient-text">más clientes</span><br />
-                    esta semana?
-                </h1>
-                <p class="lp-sub fade-in">
-                    En <strong>48 horas</strong> tienes tu primera campaña activa con Inteligencia Artificial. Sin
-                    estructura costosa. Sin contratos eternos. <strong>Solo resultados.</strong>
-                </p>
-                <div class="lp-proof fade-in">
-                    <div class="proof-item">
-                        <span class="proof-num">+300%</span>
-                        <span class="proof-label">ROAS promedio</span>
-                    </div>
-                    <div class="proof-item">
-                        <span class="proof-num">48hs</span>
-                        <span class="proof-label">Tiempo de lanzamiento</span>
-                    </div>
-                    <div class="proof-item">
-                        <span class="proof-num">10x</span>
-                        <span class="proof-label">Más barato que agencia</span>
-                    </div>
-                </div>
-                <div class="lp-ctas fade-in">
-                    <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
-                        class="btn-whatsapp btn-large" target="_blank" rel="noopener" id="hero-wa-btn">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                            <path
-                                d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                        </svg>
-                        Hablar con el Agente IA ahora
-                    </a>
-                    <a href="#lead-form" class="btn-ghost btn-large" id="hero-form-btn">O deja tus datos →</a>
-                </div>
-                <!-- Social proof avatars -->
-                <div class="social-proof fade-in">
-                    <div class="avatars">
-                        <div class="avatar" style="background:#7000FF">M</div>
-                        <div class="avatar" style="background:#00a884">L</div>
-                        <div class="avatar" style="background:#e11d48">A</div>
-                        <div class="avatar" style="background:#f59e0b">R</div>
-                        <div class="avatar" style="background:#0ea5e9">C</div>
-                    </div>
-                    <p><strong>+120 negocios</strong> ya escalan con Conversia este año</p>
-                </div>
-            </div>
-
-            <!-- Lead form en hero (acorta el funnel) -->
-            <div class="lp-hero-right fade-in">
-                <div class="hero-form-card" id="lead-form">
-                    <div class="hfc-header">
-                        <div class="hfc-badge">Cupos limitados este mes</div>
-                        <h2>Quiero escalar mis ventas</h2>
-                        <p>Completa el formulario y nuestro Agente IA te responde en minutos</p>
-                    </div>
-                    <form id="lp-form" novalidate>
-                        <div class="lp-form-group">
-                            <label for="lp-nombre">Tu nombre</label>
-                            <input type="text" id="lp-nombre" placeholder="Nombre completo" required />
-                        </div>
-                        <div class="lp-form-group">
-                            <label for="lp-whatsapp">WhatsApp *</label>
-                            <input type="tel" id="lp-whatsapp" placeholder="+54 9 11 XXXX XXXX" required />
-                        </div>
-                        <div class="lp-form-group">
-                            <label for="lp-rubro">Rubro de tu negocio</label>
-                            <select id="lp-rubro">
-                                <option value="" disabled selected>Selecciona tu rubro</option>
-                                <option value="local">Negocio Local</option>
-                                <option value="profesional">Profesional Independiente</option>
-                                <option value="ecommerce">Ecommerce</option>
-                                <option value="clinica">Clínica / Salud</option>
-                                <option value="gastronomia">Gastronomía</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-primary btn-full" id="lp-submit-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                <path
-                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                            </svg>
-                            <span>Quiero ser contactado por WhatsApp</span>
-                        </button>
-                        <p class="lp-form-notice">Sin spam. Te responde nuestro Agente IA al instante.</p>
-                    </form>
-                </div>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
+          <p>Socios de Crecimiento con Inteligencia Artificial. Democratizamos el acceso a la tecnología publicitaria
+            de&nbsp;élite.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener" aria-label="Instagram"
+              id="footer-ig">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61558746508457" target="_blank" rel="noopener"
+              aria-label="Facebook" id="footer-fb">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/agencia-conversia/" target="_blank" rel="noopener"
+              aria-label="LinkedIn" id="footer-li">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Conversia. Todos los derechos reservados.</span>
+        <span class="footer-powered">Powered by <span class="gradient-text">Conversia</span></span>
+      </div>
+    </div>
+  </footer>
 
-    <!-- ══════════════════════════════════════
-       LOGOS / PLATAFORMAS
-  ══════════════════════════════════════ -->
-    <section class="lp-logos">
-        <div class="container">
-            <p class="logos-label">Campañas en todas las plataformas</p>
-            <div class="logos-row">
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z" fill="#1877F2" />
-                        <path
-                            d="M28.45 25.5H25V37h-5V25.5h-2.5V21H20v-2.5C20 15.9 21.4 14 25 14h3.5v4.5H27c-1.1 0-2 .45-2 1.5V21h3.5l-.05 4.5z"
-                            fill="#fff" />
-                    </svg>
-                    Meta Ads
-                </div>
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z" fill="#E1306C" />
-                        <circle cx="24" cy="24" r="7" stroke="#fff" stroke-width="3" />
-                        <circle cx="32" cy="16" r="2" fill="#fff" />
-                    </svg>
-                    Instagram Ads
-                </div>
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <path d="M6 12l18 12L42 12" stroke="#4285F4" stroke-width="3" />
-                        <rect x="6" y="10" width="36" height="28" rx="3" stroke="#4285F4" stroke-width="3" />
-                    </svg>
-                    Google Ads
-                </div>
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <rect x="4" y="4" width="40" height="40" rx="8" fill="#0A66C2" />
-                        <path d="M16 20v14M16 14v2M24 20v14M24 26c0-3.31 2.69-6 6-6s6 2.69 6 6v8" stroke="#fff"
-                            stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                    LinkedIn Ads
-                </div>
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <rect x="4" y="4" width="40" height="40" rx="4" fill="#000" />
-                        <path d="M26 8l-12 32h5l3-8h10l3 8h5L26 8zm-2 18 4-10 4 10h-8z" fill="#fff" />
-                    </svg>
-                    TikTok Ads
-                </div>
-                <div class="logo-chip">
-                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                        <circle cx="24" cy="24" r="20" fill="#25D366" />
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059C10.8 11.032 10.955 10.872 11.103 10.724c.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-                            fill="#fff" />
-                    </svg>
-                    WhatsApp Ads
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       SECTION: Por qué Conversia
-  ══════════════════════════════════════ -->
-    <section class="lp-section lp-why">
-        <div class="container">
-            <div class="lp-why-inner">
-                <div class="lp-why-text">
-                    <div class="section-label">El problema</div>
-                    <h2>Las agencias tradicionales <span class="gradient-text">te cobran demasiado</span> y tardan
-                        demasiado</h2>
-                    <p>Un equipo de publicidad in-house puede costarte más de $3.000 USD al mes. Las grandes agencias te
-                        piden contratos largos y resultados que tardan. <strong>Nosotros llegamos en 48 horas y cobramos
-                            solo cuando creces.</strong></p>
-                    <ul class="why-list">
-                        <li>
-                            <div class="why-icon yes">✓</div>
-                            <span><strong>Conversia:</strong> Setup en 48hs · Fee simbólico · Success Fee con ROAS
-                                positivo</span>
-                        </li>
-                        <li>
-                            <div class="why-icon no">✗</div>
-                            <span><strong>Agencia tradicional:</strong> 2-4 semanas · Fee fijo alto · Contratos
-                                anuales</span>
-                        </li>
-                        <li>
-                            <div class="why-icon no">✗</div>
-                            <span><strong>Hacerlo solo:</strong> Curva de aprendizaje larga · Dinero quemado en prueba y
-                                error</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lp-why-card">
-                    <div class="why-card-inner">
-                        <div class="wci-label">Ahorro estimado vs. agencia tradicional</div>
-                        <div class="wci-number gradient-text">$2.500<span>USD/mes</span></div>
-                        <div class="wci-desc">Mismo resultado. Sin el costo inflado de la estructura humana.</div>
-                        <div class="wci-divider"></div>
-                        <div class="wci-features">
-                            <div class="wci-feature">
-                                <span class="wci-dot"></span> Segmentación IA hiperprecisa
-                            </div>
-                            <div class="wci-feature">
-                                <span class="wci-dot"></span> Creatividades generadas con IA
-                            </div>
-                            <div class="wci-feature">
-                                <span class="wci-dot"></span> Optimización 24/7 automática
-                            </div>
-                            <div class="wci-feature">
-                                <span class="wci-dot"></span> Reportes en tiempo real
-                            </div>
-                            <div class="wci-feature">
-                                <span class="wci-dot"></span> Agente IA disponible siempre
-                            </div>
-                        </div>
-                        <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
-                            class="btn-whatsapp" target="_blank" rel="noopener" id="why-wa-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                <path
-                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                            </svg>
-                            Consultar ahora
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       SECTION: Proceso / Pasos
-  ══════════════════════════════════════ -->
-    <section class="lp-section lp-steps">
-        <div class="container">
-            <div class="section-label" style="text-align:center;">Así funciona</div>
-            <h2 class="lp-section-title" style="text-align:center;">De cero a ventas en <span class="gradient-text">48
-                    horas</span></h2>
-            <div class="steps-grid">
-                <div class="step-card lp-fade">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">💬</div>
-                    <h3>Hablas con nuestro Agente IA</h3>
-                    <p>Por WhatsApp, en minutos. Sin llamadas. Sin formularios largos. El agente analiza tu negocio y te
-                        propone la estrategia.</p>
-                    <div class="step-time">⏱ 15 minutos</div>
-                </div>
-                <div class="step-connector">
-                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
-                        <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arr)" stroke-width="2" stroke-linecap="round" />
-                        <defs>
-                            <linearGradient id="arr" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#7000FF" />
-                                <stop offset="1" stop-color="#00D1FF" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="step-card lp-fade">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">🛠️</div>
-                    <h3>Configuramos tu ecosistema</h3>
-                    <p>Píxeles, audiencias, creatividades y estructura de campaña generadas con IA. Todo listo sin que
-                        tengas que mover un dedo.</p>
-                    <div class="step-time">⏱ 24 horas</div>
-                </div>
-                <div class="step-connector">
-                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
-                        <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arr2)" stroke-width="2" stroke-linecap="round" />
-                        <defs>
-                            <linearGradient id="arr2" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#7000FF" />
-                                <stop offset="1" stop-color="#00D1FF" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="step-card lp-fade">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">🚀</div>
-                    <h3>Lanzamos y optimizamos</h3>
-                    <p>Tus campañas salen al aire. La IA optimiza en tiempo real cada peso invertido para maximizar tu
-                        ROAS continuamente.</p>
-                    <div class="step-time">⏱ 48 horas</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       SECTION: Testimonios / Social Proof
-  ══════════════════════════════════════ -->
-    <section class="lp-section lp-testimonios">
-        <div class="container">
-            <div class="section-label" style="text-align:center;">Resultados reales</div>
-            <h2 class="lp-section-title" style="text-align:center;">Lo que dicen nuestros <span
-                    class="gradient-text">socios</span></h2>
-            <div class="testimonio-grid">
-                <div class="testimonio-card lp-fade">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-quote">"En el primer mes recuperamos 5 veces lo invertido. Nunca había logrado ese ROAS
-                        con ninguna otra agencia."</p>
-                    <div class="t-author">
-                        <div class="t-avatar" style="background:#7000FF">M</div>
-                        <div>
-                            <div class="t-name">Martín G.</div>
-                            <div class="t-role">Centro de Estética · Buenos Aires</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonio-card lp-fade">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-quote">"El agente de IA por WhatsApp es increíble. A las 2 de la mañana me respondió la
-                        consulta que tenía sobre mi campaña."</p>
-                    <div class="t-author">
-                        <div class="t-avatar" style="background:#00a884">L</div>
-                        <div>
-                            <div class="t-name">Laura M.</div>
-                            <div class="t-role">Psicóloga · Córdoba</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonio-card lp-fade">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-quote">"Triplicamos nuestras ventas online en 60 días. Lo que más valoro es la
-                        transparencia — siempre sé exactamente cuánto ganamos."</p>
-                    <div class="t-author">
-                        <div class="t-avatar" style="background:#e11d48">A</div>
-                        <div>
-                            <div class="t-name">Alejandro R.</div>
-                            <div class="t-role">Ecommerce de Indumentaria · Rosario</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       SECTION: FAQ
-  ══════════════════════════════════════ -->
-    <section class="lp-section lp-faq">
-        <div class="container lp-faq-inner">
-            <div>
-                <div class="section-label">Preguntas frecuentes</div>
-                <h2 class="lp-section-title">Respondemos tus <span class="gradient-text">dudas</span></h2>
-                <p class="lp-faq-sub">¿Prefieres preguntar directamente? Nuestro Agente IA está disponible 24/7.</p>
-                <a href="https://wa.me/5491100000000?text=Hola%21+Tengo+una+consulta+sobre+Conversia"
-                    class="btn-whatsapp" target="_blank" rel="noopener" id="faq-wa-btn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                        <path
-                            d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                    </svg>
-                    Preguntar al Agente IA
-                </a>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-q" id="faq1-btn">¿Cuánto presupuesto de publicidad necesito tener? <span
-                            class="faq-arrow">↓</span></button>
-                    <div class="faq-a" id="faq1-ans">Trabajamos con negocios desde $200 USD de inversión publicitaria
-                        mensual. Nuestro sistema de IA optimiza cada centavo para maximizar el retorno sin importar el
-                        tamaño del presupuesto.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" id="faq2-btn">¿Necesito tener experiencia en publicidad digital? <span
-                            class="faq-arrow">↓</span></button>
-                    <div class="faq-a" id="faq2-ans">Para nada. Nos encargamos de todo: configuración de cuentas,
-                        píxeles, audiencias, creatividades y optimización continua. Tú solo atiendes los nuevos clientes
-                        que te llegan.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" id="faq3-btn">¿Cómo funciona el Success Fee? <span
-                            class="faq-arrow">↓</span></button>
-                    <div class="faq-a" id="faq3-ans">El Success Fee es una comisión pequeña que se aplica solo cuando tu
-                        campaña alcanza un ROAS positivo acordado. Si tu inversión no te genera más ventas de las que
-                        costó, no te cobramos la comisión. Nuestros incentivos están 100% alineados con tu crecimiento.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" id="faq4-btn">¿Qué es el Agente IA de WhatsApp? <span
-                            class="faq-arrow">↓</span></button>
-                    <div class="faq-a" id="faq4-ans">Es un asistente de inteligencia artificial disponible 24/7 que
-                        puede responder consultas sobre tu cuenta, enviarte reportes, alertarte ante variaciones en el
-                        rendimiento y coordinar con nuestro equipo humano para decisiones estratégicas importantes.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" id="faq5-btn">¿En cuánto tiempo veo resultados? <span
-                            class="faq-arrow">↓</span></button>
-                    <div class="faq-a" id="faq5-ans">Las primeras campañas salen en 48 horas. Los primeros resultados
-                        medibles (leads, ventas, visitas) se ven en la primera semana. La optimización máxima ocurre
-                        entre la semana 3 y el mes 2, cuando el algoritmo ya aprendió las mejores audiencias.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       SECTION: CTA Final
-  ══════════════════════════════════════ -->
-    <section class="lp-section lp-cta-final">
-        <div class="lp-cta-bg">
-            <canvas id="cta-canvas"></canvas>
-        </div>
-        <div class="container lp-cta-content">
-            <div class="section-label" style="text-align:center; color:#fff;">Es tu turno</div>
-            <h2>Empezá a competir<br /><span class="gradient-text">como los grandes</span></h2>
-            <p>Cupos limitados cada mes. No dejes que tu competencia tome ventaja primero.</p>
-            <div class="lp-cta-actions">
-                <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
-                    class="btn-whatsapp btn-large" target="_blank" rel="noopener" id="final-wa-btn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                        <path
-                            d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                    </svg>
-                    Hablar con el Agente IA ahora
-                </a>
-                <a href="#lead-form" class="btn-ghost btn-large">O completar el formulario →</a>
-            </div>
-            <div class="cta-guarantee">
-                🔒 Sin compromiso · Sin contratos largos · Resultados en 48hs
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-       FOOTER MÍNIMO
-  ══════════════════════════════════════ -->
-    <footer class="lp-footer">
-        <div class="container lp-footer-inner">
-            <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
-            <div class="lp-footer-links">
-                <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener"
-                    id="footer-lp-ig">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61558746508457" target="_blank" rel="noopener"
-                    id="footer-lp-fb">Facebook</a>
-                <a href="https://www.linkedin.com/company/agencia-conversia/" target="_blank" rel="noopener"
-                    id="footer-lp-li">LinkedIn</a>
-                <a href="index.html" id="footer-main-site">Sitio principal</a>
-            </div>
-            <p class="lp-footer-copy">© 2025 Conversia. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
        BOTÓN FLOTANTE WHATSAPP
   ══════════════════════════════════════ -->
-    <a href="https://wa.me/5491100000000?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
-        class="wa-float" target="_blank" rel="noopener" id="wa-float-btn"
-        aria-label="Hablar con Agente IA por WhatsApp">
-        <div class="wa-float-pulse"></div>
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-            <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-        </svg>
-        <span class="wa-float-label">Agente IA</span>
-    </a>
+  <a href="https://wa.me/59893731212?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
+    class="wa-float" target="_blank" rel="noopener" id="wa-float-btn" aria-label="Hablar con Agente IA por WhatsApp">
+    <div class="wa-float-pulse"></div>
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+    </svg>
+  </a>
 
-    <!-- Toast -->
-    <div class="lp-toast" id="lp-toast"></div>
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
 
-    <script src="landing.js"></script>
+  <script src="landing.js"></script>
 </body>
 
 </html>

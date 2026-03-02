@@ -314,13 +314,36 @@ contactForm.addEventListener('submit', (e) => {
     submitBtn.disabled = true;
     submitBtn.querySelector('span').textContent = 'Enviando...';
 
-    // Simulate async send (replace with real backend/formspree/n8n webhook)
-    setTimeout(() => {
-        showToast('✅ ¡Gracias! Te contactamos en las próximas 24hs.');
-        contactForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.querySelector('span').textContent = 'Quiero acceso al sistema';
-    }, 1400);
+    // Send email using Formsubmit API
+    fetch("https://formsubmit.co/ajax/contacto@agenciaconversia.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            _subject: "Nuevo Contacto - Sitio Web Conversia",
+            Nombre: nombre,
+            Negocio: negocio,
+            Email: email,
+            WhatsApp: whatsapp,
+            Rubro: document.getElementById('rubro').value || 'No especificado',
+            Mensaje: document.getElementById('mensaje').value || 'Sin mensaje'
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            showToast('✅ ¡Gracias! Te contactamos en las próximas 24hs.');
+            contactForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.querySelector('span').textContent = 'Quiero acceso al sistema';
+        })
+        .catch(error => {
+            showToast('❌ Hubo un error al enviar. Por favor intenta de nuevo.');
+            console.error(error);
+            submitBtn.disabled = false;
+            submitBtn.querySelector('span').textContent = 'Quiero acceso al sistema';
+        });
 });
 
 // ── Smooth active nav link highlight ─────────────
