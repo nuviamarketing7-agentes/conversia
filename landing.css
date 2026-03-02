@@ -418,6 +418,18 @@ select {
     align-items: center;
 }
 
+/* Hero left / right columns */
+.lp-hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lp-hero-right {
+    position: relative;
+    z-index: 2;
+}
+
 /* Hero left */
 .hero-badge {
     display: inline-flex;
@@ -1343,4 +1355,29 @@ select {
 .logo-chip {
     font-size: 0.75rem;
     padding: 7px 14px;
+}
+
+/* Minimalist Button for Footer */
+.btn-minimalist {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+
+.btn-minimalist:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 209, 255, 0.4);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

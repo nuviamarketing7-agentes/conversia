@@ -19,6 +19,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="landing.css" />
 </head>
 
@@ -33,7 +34,7 @@
         <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
       </a>
       <div class="nav-actions">
-        <a href="#contacto" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
+        <a href="#lead-form" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
       </div>
     </nav>
   </header>
@@ -80,20 +81,9 @@
               <path
                 d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
             </svg>
-            Hablar con el Agente IA ahora
+            Consulta con un agente
           </a>
           <a href="#lead-form" class="btn-ghost btn-large" id="hero-form-btn">O deja tus datos →</a>
-        </div>
-        <!-- Social proof avatars -->
-        <div class="social-proof fade-in">
-          <div class="avatars">
-            <div class="avatar" style="background:#7000FF">M</div>
-            <div class="avatar" style="background:#00a884">L</div>
-            <div class="avatar" style="background:#e11d48">A</div>
-            <div class="avatar" style="background:#f59e0b">R</div>
-            <div class="avatar" style="background:#0ea5e9">C</div>
-          </div>
-          <p><strong>+120 negocios</strong> ya escalan con Conversia este año</p>
         </div>
       </div>
 
@@ -133,7 +123,7 @@
                 <path
                   d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
               </svg>
-              <span>Quiero ser contactado por WhatsApp</span>
+              <span>Consulta con un agente</span>
             </button>
             <p class="lp-form-notice">Sin spam. Te responde nuestro Agente IA al instante.</p>
           </form>
@@ -275,7 +265,7 @@
                 <path
                   d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
               </svg>
-              Consultar ahora
+              Consulta con un agente
             </a>
           </div>
         </div>
@@ -424,7 +414,7 @@
             <path
               d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
           </svg>
-          Preguntar al Agente IA
+          Consulta con un agente
         </a>
       </div>
       <div class="faq-list">
@@ -508,14 +498,36 @@
   <footer class="lp-footer">
     <div class="container lp-footer-inner">
       <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
-      <div class="lp-footer-links">
-        <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener"
-          id="footer-lp-ig">Instagram</a>
+      <div class="footer-socials" style="margin-top: 20px;">
+        <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
         <a href="https://www.facebook.com/profile.php?id=61558746508457" target="_blank" rel="noopener"
-          id="footer-lp-fb">Facebook</a>
+          aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
         <a href="https://www.linkedin.com/company/agencia-conversia/" target="_blank" rel="noopener"
-          id="footer-lp-li">LinkedIn</a>
-        <a href="index.html" id="footer-main-site">Sitio principal</a>
+          aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-bottom-actions" style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
+        <a href="index.html" class="btn-minimalist">
+          <span>Visitar sitio principal</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
       <p class="lp-footer-copy">© 2025 Conversia. Todos los derechos reservados.</p>
     </div>
@@ -533,7 +545,6 @@
       <path
         d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
     </svg>
-    <span class="wa-float-label">Agente IA</span>
   </a>
 
   <!-- Toast notification -->
