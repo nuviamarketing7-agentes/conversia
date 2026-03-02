@@ -36,6 +36,36 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ── Counter animation ─────────────────────────────
+function animateCounter(el, target, duration = 1800) {
+    const start = performance.now();
+    const update = (time) => {
+        const progress = Math.min((time - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(ease * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target;
+    };
+    requestAnimationFrame(update);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.stat-num').forEach(el => {
+                const targetVal = el.getAttribute('data-target');
+                if (targetVal) {
+                    animateCounter(el, parseInt(targetVal));
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsEl = document.getElementById('lp-stats');
+if (statsEl) statsObserver.observe(statsEl);
+
 // ── Hero Canvas (particles) ───────────────────
 (function initLpCanvas() {
     const canvas = document.getElementById('lp-canvas');
