@@ -338,3 +338,24 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => navObserver.observe(s));
+
+// ── Prevent Orphan Words ──────────────────────────
+function preventOrphans() {
+    const selectors = 'p, h1, h2, h3, h4, h5, h6, .section-sub, .hero-sub, .bento-card p, .nicho-card p';
+    document.querySelectorAll(selectors).forEach(el => {
+        if (el.children.length > 0) return; // Skip if has complex children to avoid breaking tags
+        let text = el.innerText.trim();
+        if (text.includes(' ')) {
+            const words = text.split(' ');
+            if (words.length > 3) {
+                const lastWord = words.pop();
+                const secondLastWord = words.pop();
+                el.innerHTML = words.join(' ') + ' ' + secondLastWord + '&nbsp;' + lastWord;
+            }
+        }
+    });
+}
+// Run once on load
+window.addEventListener('DOMContentLoaded', preventOrphans);
+// Run again if tabs change content
+nichoTabs.forEach(tab => tab.addEventListener('click', () => setTimeout(preventOrphans, 100)));

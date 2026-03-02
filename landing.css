@@ -61,8 +61,25 @@ h4,
 h5,
 h6,
 .lp-title,
-.lp-section-title {
+.lp-section-title,
+.lp-why-text h2,
+.hfc-header h2,
+.feat-card h3,
+.step-card h3 {
     text-wrap: balance;
+}
+
+p,
+li,
+blockquote,
+.lp-sub,
+.lp-why-text p,
+.hfc-header p,
+.feat-card p,
+.step-card p,
+.case-card p,
+.lp-logos-p {
+    text-wrap: pretty;
 }
 
 img {
@@ -608,6 +625,7 @@ select {
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.2s;
+    appearance: none;
     -webkit-appearance: none;
 }
 
