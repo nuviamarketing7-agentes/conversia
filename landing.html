@@ -26,33 +26,25 @@
 <body>
 
   <!-- ══════════════════════════════════════
-       NAVIGATION
+       VISITOR COUNTER BAR
   ══════════════════════════════════════ -->
-  <header id="header">
-    <div class="nav-wrapper" id="navbar">
-      <nav class="nav-inner">
-        <a href="#inicio" class="nav-logo" id="nav-logo-link">
-          <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
-        </a>
-        <div class="nav-actions">
-          <a href="#lead-form" class="btn-primary nav-cta" id="nav-cta-btn">Quiero acceso al sistema</a>
-          <button class="burger" id="burger-btn" aria-label="Abrir menú">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </nav>
-      <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <ul>
-          <li><a href="#propuesta" class="mobile-link">Nuestra propuesta</a></li>
-          <li><a href="#porque-nosotros" class="mobile-link">Por qué nosotros</a></li>
-          <li><a href="#nichos" class="mobile-link">Para quién es</a></li>
-          <li><a href="#faq" class="mobile-link">Preguntas frecuentes</a></li>
-        </ul>
-        <a href="#lead-form" class="btn-primary mobile-cta">Quiero acceso al sistema</a>
+  <div id="visit-counter" class="visit-counter-bar reveal">
+    <div class="vc-canvas-container">
+      <canvas id="vc-canvas"></canvas>
+    </div>
+    <div class="vc-content">
+      <div class="vc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </div>
+      <div class="vc-text">
+        <span class="vc-number" id="visitor-count">...</span>
+        <span class="vc-label">Personas han explorado Conversia</span>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- ══════════════════════════════════════
        HERO SECTION
@@ -101,52 +93,10 @@
             </svg>
             Consulta con un agente
           </a>
-          <a href="#lead-form" class="btn-ghost btn-large" id="hero-form-btn">O deja tus datos →</a>
         </div>
       </div>
 
-      <!-- Lead form en hero (acorta el funnel) -->
-      <div class="lp-hero-right fade-in">
-        <div class="hero-form-card" id="lead-form">
-          <div class="hfc-header">
-            <div class="hfc-badge">Cupos limitados este mes</div>
-            <h2>Quiero escalar mis ventas</h2>
-            <p>Completa el formulario y nuestro Agente IA te responde en minutos</p>
-          </div>
-          <form id="lp-form" novalidate>
-            <div class="lp-form-group">
-              <label for="lp-nombre">Tu nombre</label>
-              <input type="text" id="lp-nombre" placeholder="Nombre completo" required />
-            </div>
-            <div class="lp-form-group">
-              <label for="lp-whatsapp">WhatsApp *</label>
-              <input type="tel" id="lp-whatsapp" placeholder="+54 9 11 XXXX XXXX" required />
-            </div>
-            <div class="lp-form-group">
-              <label for="lp-rubro">Rubro de tu negocio</label>
-              <select id="lp-rubro">
-                <option value="" disabled selected>Selecciona tu rubro</option>
-                <option value="local">Negocio Local</option>
-                <option value="profesional">Profesional Independiente</option>
-                <option value="ecommerce">Ecommerce</option>
-                <option value="clinica">Clínica / Salud</option>
-                <option value="gastronomia">Gastronomía</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-primary btn-full" id="lp-submit-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                <path
-                  d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-              </svg>
-              <span>Consulta con un agente</span>
-            </button>
-            <p class="lp-form-notice">Sin spam. Te responde nuestro Agente IA al instante.</p>
-          </form>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -476,39 +426,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       SECTION: Filtro / Formulario
-  ══════════════════════════════════════ -->
-  <section class="section-filtro" id="filtro">
-    <div class="container">
-      <div class="filtro-wrapper reveal">
-        <div class="filtro-text">
-          <div class="section-label">Antes de empezar</div>
-          <h2>¿Eres el candidato ideal para Conversia?</h2>
-          <p>Trabajamos con negocios que están listos para crecer. Responde estas dos preguntas y lo descubrimos juntos.
-          </p>
-        </div>
-        <div class="filtro-form">
-          <div class="filtro-question" id="q1-block">
-            <p class="q-label">¿Quieres escalar tus ventas actuales?</p>
-            <div class="q-options">
-              <button class="q-btn" data-q="1" data-val="si" id="q1-si">Sí, es mi prioridad</button>
-              <button class="q-btn" data-q="1" data-val="no" id="q1-no">Todavía no lo necesito</button>
-            </div>
-          </div>
-          <div class="filtro-question" id="q2-block" style="display:none;">
-            <p class="q-label">¿Estás listo para atender una demanda de alto nivel?</p>
-            <div class="q-options">
-              <button class="q-btn" data-q="2" data-val="si" id="q2-si">Sí, tengo capacidad operativa</button>
-              <button class="q-btn" data-q="2" data-val="no" id="q2-no">Necesito organizar primero</button>
-            </div>
-          </div>
-        </div>
-        <div class="filtro-result" id="filtro-result" style="display:none;"></div>
-      </div>
-    </div>
-    </div>
-  </section>
+
 
   <!-- ══════════════════════════════════════
        FOOTER
@@ -516,54 +434,12 @@
   <footer class="lp-footer">
     <div class="container lp-footer-inner">
       <span class="logo-text">CONVERS<span class="logo-ia">IA</span></span>
-      <div class="footer-socials" style="margin-top: 20px;">
-        <a href="https://www.instagram.com/agencia.conversia/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61558746508457" target="_blank" rel="noopener"
-          aria-label="Facebook">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/company/agencia-conversia/" target="_blank" rel="noopener"
-          aria-label="LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
-      </div>
-      <div class="footer-bottom-actions" style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
-        <a href="index.html" class="btn-minimalist">
-          <span>Visitar sitio principal</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
+
       <p class="lp-footer-copy">© 2025 Conversia. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════
-       BOTÓN FLOTANTE WHATSAPP
-  ══════════════════════════════════════ -->
-  <a href="https://wa.me/59893731212?text=Hola%21+Quiero+información+sobre+Conversia+y+cómo+escalar+mis+ventas+con+IA"
-    class="wa-float" target="_blank" rel="noopener" id="wa-float-btn" aria-label="Hablar con Agente IA por WhatsApp">
-    <div class="wa-float-pulse"></div>
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-      <path
-        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.849L.057 23.522a.75.75 0 0 0 .921.921l5.673-1.465A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.354l-.355-.212-3.669.947.963-3.583-.232-.371A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-    </svg>
-  </a>
+
 
   <!-- Toast notification -->
   <div class="toast" id="toast"></div>
