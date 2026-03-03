@@ -1381,7 +1381,7 @@ select {
     }
 
     .lp-hero {
-        align-items: flex-start;
+        align-items: center;
         min-height: auto;
         padding: 100px 0 60px;
     }
@@ -1404,7 +1404,6 @@ select {
         gap: 36px;
     }
 
-    /* Shrink the nav CTA on medium tablets to avoid crowding */
     /* Hide the nav CTA earlier to avoid overlapping the logo */
     .nav-cta {
         display: none !important;

@@ -423,7 +423,8 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 0 80px;
+  align-items: center;
+  padding: 140px 0 80px;
   overflow: hidden;
 }
 
@@ -441,6 +442,7 @@ textarea {
 .hero-content {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .hero-badge {
