@@ -341,3 +341,107 @@ function preventOrphans() {
 }
 window.addEventListener('DOMContentLoaded', preventOrphans);
 nichoTabs.forEach(tab => tab.addEventListener('click', () => setTimeout(preventOrphans, 100)));
+
+// ── Visitor Counter Logic ────────────────────
+(function initVisitorCounter() {
+    const vcNum = document.getElementById('visitor-count');
+    if (!vcNum) return;
+
+    // 1. Fetch count
+    fetch('https://api.counterapi.dev/v1/agenciaconversia/landing/up')
+        .then(res => res.json())
+        .then(data => {
+            if (data && data.count) {
+                // Animate number from a slightly lower value to the target
+                let target = data.count;
+                let current = Math.max(0, target - 30); // Start animation a bit before
+                const duration = 2500;
+                const start = performance.now();
+
+                const updateNum = (time) => {
+                    const elapsed = time - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // ease out expo
+                    const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                    const val = Math.floor(current + (target - current) * ease);
+                    vcNum.textContent = val.toLocaleString('es-ES');
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateNum);
+                    } else {
+                        vcNum.textContent = target.toLocaleString('es-ES');
+                        vcNum.classList.add('pulse');
+                    }
+                };
+                requestAnimationFrame(updateNum);
+            }
+        })
+        .catch(err => {
+            console.error('Error fetching visitor count:', err);
+            vcNum.textContent = '...';
+        });
+
+    // 2. Setup Canvas animation for the counter background
+    const canvas = document.getElementById('vc-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H;
+    let particles = [];
+
+    function resize() {
+        const parent = canvas.parentElement;
+        W = canvas.width = parent.offsetWidth;
+        H = canvas.height = parent.offsetHeight;
+        buildParticles();
+    }
+
+    function buildParticles() {
+        particles = [];
+        const count = Math.floor(W / 12); // Particle density
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 1.5 + 0.5,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                alpha: Math.random() * 0.6 + 0.1
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        // Subtle space gradient
+        const grd = ctx.createLinearGradient(0, 0, W, H);
+        grd.addColorStop(0, 'rgba(112, 0, 255, 0.18)');
+        grd.addColorStop(1, 'rgba(0, 209, 255, 0.18)');
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, W, H);
+
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) p.x = W;
+            if (p.x > W) p.x = 0;
+            if (p.y < 0) p.y = H;
+            if (p.y > H) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0, 209, 255, ${p.alpha})`;
+            ctx.fill();
+        });
+
+        requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', resize);
+
+    // Give a slight delay for layouts to settle before sizing the canvas
+    setTimeout(() => {
+        resize();
+        draw();
+    }, 150);
+})();

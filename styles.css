@@ -139,11 +139,13 @@ textarea {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .section-sub {
