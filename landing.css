@@ -613,9 +613,6 @@ select {
     gap: 24px;
     flex-wrap: wrap;
     margin-bottom: 32px;
-    padding: 20px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
 }
 
 .proof-item {
@@ -1399,9 +1396,22 @@ select {
         max-width: 500px;
     }
 
+    .steps-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .step-connector {
+        display: none;
+    }
+
     .lp-faq-inner {
         grid-template-columns: 1fr;
         gap: 36px;
+    }
+
+    .testimonio-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Hide the nav CTA earlier to avoid overlapping the logo */
@@ -1411,14 +1421,6 @@ select {
 }
 
 @media (max-width: 768px) {
-    .steps-grid {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .step-connector {
-        display: none;
-    }
 
     .testimonio-grid {
         grid-template-columns: 1fr;
